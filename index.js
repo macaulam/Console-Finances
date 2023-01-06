@@ -86,3 +86,10 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+// initialise the total profit/loss finances
+// initialise array to hold change in profit/loss between months
+// loop through finances starting from second month, adding profit/loss/
+// initialise greatest increase/decrease
+// initialise sum of changes profit/loss 
+// loop starting from second change, adding each change and updating the index position of the biggest and smallest change//
+// Add the results to the template
