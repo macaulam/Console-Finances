@@ -1,4 +1,4 @@
-var finances = [
+let finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -86,10 +86,41 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
-// initialise the total profit/loss finances
-// initialise array to hold change in profit/loss between months
-// loop through finances starting from second month, adding profit/loss/
-// initialise greatest increase/decrease
-// initialise sum of changes profit/loss 
-// loop starting from second change, adding each change and updating the index position of the biggest and smallest change//
-// Add the results to the template
+// initialise profit/loss total 
+let totalProfLoss = finances[0][1];
+// initialise empty array to hold change in profit/loss between months
+let changesProfLoss = [];
+// loop through finances starting from second month adding profit/loss from each month to totalProfLoss and push the change into changesProfLoss /
+for (let i = 1; i < finances.length; i++) {
+    totalProfLoss += finances[i][1];
+    changesProfLoss.push([finances[i][0], finances[i][1] - finances[i - 1][1]]);
+}
+// initialise greatest increase/decrease pointers
+let greatestIncreaseIndex = 0;
+let greatestDecreaseIndex = 0;
+
+// initialise sum changes to first profit/loss change in changesProfLoss
+let sumChanges = changesProfLoss[0][1];
+// loop through changesProfLoss starting from second change, adding each change to sumChanges and updating the biggest and smallest change /
+for (let i = 1; i < changesProfLoss.length; i++) {
+
+    sumChanges += changesProfLoss[i][1];
+
+    if (changesProfLoss[i][1] > changesProfLoss[greatestIncreaseIndex][1]) {
+        greatestIncreaseIndex = i;
+    }
+
+    if (changesProfLoss[i][1] < changesProfLoss[greatestDecreaseIndex][1]) {
+        greatestDecreaseIndex = i;
+    }
+}
+// output results using template 
+console.log(`
+    Financial Analysis
+    ----------------------------
+    Total Months: ${finances.length}
+    Total: \$${totalProfLoss}
+    Average Change: \$${(sumOfChanges / (changesProfLoss.length)).toFixed(2)}
+    Greatest Increase in Profits: ${changesProfLoss[greatestIncreaseIndex][0]} (\$${changesProfLoss[greatestIncreaseIndex][1]})
+    Greatest Decrease in Profits: ${changesProfLoss[greatestDecreaseIndex][0]} (\$${changesProfLoss[greatestDecreaseIndex][1]})
+`);
