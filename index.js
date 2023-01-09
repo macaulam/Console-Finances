@@ -120,7 +120,7 @@ console.log(`
     ----------------------------
     Total Months: ${finances.length}
     Total: \$${totalProfLoss}
-    Average Change: \$${(sumOfChanges / (changesProfLoss.length)).toFixed(2)}
+    Average Change: \$${(sumChanges / (changesProfLoss.length)).toFixed(2)}
     Greatest Increase in Profits: ${changesProfLoss[greatestIncreaseIndex][0]} (\$${changesProfLoss[greatestIncreaseIndex][1]})
     Greatest Decrease in Profits: ${changesProfLoss[greatestDecreaseIndex][0]} (\$${changesProfLoss[greatestDecreaseIndex][1]})
 `);
