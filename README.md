@@ -90,7 +90,7 @@ You are required to submit BOTH of the following for review:
 To view the final results, you will need to open the page in the browser [Deployed landing page](https://macaulam.github.io/Console-Finances/) and open the Dev Tool console.
 
 The result will appear as such:
-![Deployed Page Screenshot](/Example1.PNG)
+![Deployed Page Screenshot](Example1.PNG)
 
 ---
 
