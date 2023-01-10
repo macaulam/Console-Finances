@@ -86,6 +86,12 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
 
+## Usage
+To view the final results, you will need to open the page in the browser [Deployed landing page](https://macaulam.github.io/Console-Finances/) and open the Dev Tool console.
+
+The result will appear as such:
+![Deployed Page Screenshot](./Example1.PNG)
+
 ---
 
 ## Copyright
